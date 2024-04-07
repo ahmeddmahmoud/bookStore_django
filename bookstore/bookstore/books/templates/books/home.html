@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block body %}
+        <div class="container">
+        <div class="row text-center gx-0">
+        {% for book in books %}
+            <div class="col-4">
+        <div class="card  align-items-center" >
+          <img src="{% static 'books/images/'%}{{ book.image }} " class="gx-0" style="height: 300px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{book.title}}</h5>
+            <p class="card-text">{{book.no_pages}}</p>
+              <p class="card-text">{{book.author}}</p>
+            <p class="card-text">{{book.price}}</p>
+            <a href="{{book.id}}" class="btn btn-primary">View Details</a>
+          </div>
+        </div>
+                </div>
+        {% endfor %}
+        </div>
+            </div>
+
+{% endblock %}

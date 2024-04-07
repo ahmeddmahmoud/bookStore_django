@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block body %}
+        <div class="card  align-items-center" >
+          <img src="{{ bookdata.image_url }} " class="gx-0" style="height: 300px" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{bookdata.title}}</h5>
+            <p class="card-text">{{bookdata.author}}</p>
+            <p class="card-text">{{bookdata.no_pages}} pages</p>
+            <p class="card-text">{{bookdata.price}}$</p>
+            <p class="card-text text-danger ">{{bookdata.category.name}}</p>
+          </div>
+        </div>
+{% endblock %}
